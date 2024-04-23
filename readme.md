@@ -9,7 +9,7 @@ Admin Paneli: Adminin tüm kullanıcıları yönetebileceği bir panel.<p>
 Moderator Paneli: Moderatorün içerikleri yönetebileceği bir panel.<p>
 Semi Moderator Paneli: Semi Moderatorün onay bekleyen içerikleri yönetebileceği bir panel.<p>
 Kullanıcı Paneli: Kullanıcının kendi içeriklerini yönetebileceği bir panel.<p>
-Proje CSS, HTML:<p>
+<h1><b>Proje CSS, HTML:</b></h1><p>
 Bu adımda, yukarıdaki örnekleri HTML ve CSS kullanarak tasarlayacağız. Temiz ve kullanıcı dostu bir arayüz oluşturmayı hedefleyeceğiz.<p>
 
 <h1><b>Projeyi GitHub'a Yükleme:</b></h1><p>
