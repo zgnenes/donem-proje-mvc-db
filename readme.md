@@ -10,13 +10,13 @@ Moderator Paneli: Moderatorün içerikleri yönetebileceği bir panel.<p>
 Semi Moderator Paneli: Semi Moderatorün onay bekleyen içerikleri yönetebileceği bir panel.<p>
 Kullanıcı Paneli: Kullanıcının kendi içeriklerini yönetebileceği bir panel.<p>
 <h1><b>Proje CSS, HTML:</b></h1><p>
-Bu adımda, yukarıdaki örnekleri HTML ve CSS kullanarak tasarlayacağız. Temiz ve kullanıcı dostu bir arayüz oluşturmayı hedefleyeceğiz.<p>
+Bu adımda, yukarıdaki örnekleri HTML ve CSS kullanarak tasarlanacak. Temiz ve kullanıcı dostu bir arayüz oluşturma hedeflenecek.<p>
 
 <h1><b>Projeyi GitHub'a Yükleme:</b></h1><p>
-GitHub'a bir depo oluşturarak projeyi buraya yükleyeceğiz. Bu, kodunuzu saklamak, sürüm kontrolü yapmak ve diğer geliştiricilerle işbirliği yapmak için harika bir yol olacak.<p>
+GitHub'a bir depo oluşturarak proje buraya yüklenecek. Bu, kodu saklamak, sürüm kontrolü yapmak ve diğer benzer işleri yapmak için kolaylık sağlayan bir yol olacak.<p>
 
 <h1><b>Proje Veritabanı Yönetimi:</b></h1><p>
-Veritabanı, kullanıcı bilgilerini ve yetki düzeylerini saklayacak. Bu adımda, SQL Server gibi bir veritabanı yönetim sistemini kullanarak gerekli tabloları oluşturacağız.<p>
+Veritabanı, kullanıcı bilgilerini ve yetki düzeylerini saklayacak. Bu adımda, SQL Server gibi bir veritabanı yönetim sistemini kullanarak gerekli tabloları oluşturulacak.<p>
 
 <h1><b>Proje Teslimi:</b></h1><p>
-Projeyi tamamladıktan ve test ettiğimizden sonra, GitHub'daki depoyu paylaşabiliriz. Ayrıca, projenin çalıştığından ve veritabanının doğru bir şekilde yapılandırıldığından emin olmalıyız.<p>
+Projeyi tamamladıktan ve test ettiğikten sonra, proje kullanıma hazır hale gelecek. Ayrıca, projenin çalıştığından ve veritabanının doğru bir şekilde yapılandırıldığından emin olunmalı.<p>
