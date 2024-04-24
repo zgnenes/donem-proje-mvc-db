@@ -1,8 +1,8 @@
 <h1><b>Proje Anlatımı:</b></h1><p>
-Bu proje, bir .NET MVC uygulaması olacak ve kullanıcıların kayıt olabileceği, giriş yapabileceği ve belirli yetkilere sahip oldukları bir sistem oluşturmayı hedefliyor. Proje, bir web sitesi olarak tasarlanacak ve kullanıcıların farklı yetkilere sahip oldukları bir hiyerarşi oluşturulacak. Yetkiler; admin, moderator, semi moderator ve kullanıcı olarak belirlenmiştir.
+Bu proje, bir .NET MVC uygulaması olacak ve kullanıcıların kayıt olabileceği, giriş yapabileceği ve belirli yetkilere sahip oldukları bir sistem oluşturmayı hedefliyor. Proje, bir web sitesi olarak tasarlanacak ve kullanıcıların farklı yetkilere sahip oldukları, içerik paylaşımı yapabilecekleri bir hiyerarşi oluşturulacak. Yetkiler; admin, moderator, semi moderator ve kullanıcı olarak belirlenmiştir.
 
 <h1><b>Proje Örneği:</b></h1><p>
-Ana Sayfa: Kullanıcıların kayıt olabileceği ve giriş yapabileceği bir ana sayfa.<p>
+Ana Sayfa: Kullanıcıların kayıt ve giriş sayfasına geçiş yapabileceği ve paylaşılan içerikleri görüntüleyebileceği bir ana sayfa.<p>
 Kayıt Sayfası: Yeni kullanıcıların kayıt olabileceği bir form.<p>
 Giriş Sayfası: Kayıtlı kullanıcıların giriş yapabileceği bir form.<p>
 Admin Paneli: Adminin tüm kullanıcıları yönetebileceği bir panel.<p>
