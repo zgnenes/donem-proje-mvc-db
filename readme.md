@@ -16,7 +16,7 @@ Bu adımda, yukarıdaki örnekleri HTML ve CSS kullanarak tasarlanacak. Temiz ve
 GitHub'a bir depo oluşturarak proje buraya yüklenecek. Bu, kodu saklamak, sürüm kontrolü yapmak ve diğer benzer işleri yapmak için kolaylık sağlayan bir yol olacak.<p>
 
 <h1><b>Proje Veritabanı Yönetimi:</b></h1><p>
-Veritabanı, kullanıcı bilgilerini ve yetki düzeylerini saklayacak. Bu adımda, SQL Server gibi bir veritabanı yönetim sistemini kullanarak gerekli tabloları oluşturulacak.<p>
+Veritabanı, kullanıcı bilgilerini ve yetki düzeylerini saklayacak. Bu adımda, MySQL gibi bir veritabanı yönetim sistemini kullanarak gerekli tabloları oluşturulacak.<p>
 
 <h1><b>Projenin Sonuçlanması:</b></h1><p>
 Projeyi tamamladıktan ve test ettiğikten sonra, proje kullanıma hazır hale gelecek. Ayrıca, projenin çalıştığından ve veritabanının doğru bir şekilde yapılandırıldığından emin olunmalı.<p>
