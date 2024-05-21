@@ -7,28 +7,13 @@ a.navbar-brand {
   word-break: break-all;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
 /* Sticky footer styles
 -------------------------------------------------- */
+
 html {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -38,12 +23,13 @@ html {
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
 }
 
 button.accept-policy {
@@ -53,6 +39,7 @@ button.accept-policy {
 
 /* Sticky footer styles
 -------------------------------------------------- */
+
 html {
   position: relative;
   min-height: 100%;
@@ -62,24 +49,70 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px;
+  /* Vertically center the text there */
 }
 
-/* Dropdown menü stilleri */
-.dropdown-menu {
-  min-width: 10rem; /* Dropdown menü genişliği */
+.pb-1 {
+  margin-top: 8%;
 }
 
-.dropdown-menu .dropdown-item {
-  padding: .5rem 1rem; /* Dropdown menü öğelerinin dolgusu */
+.butn {
+  display: inline-block;
 }
 
-.dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover {
-  background-color: #f8f9fa; /* Hover efekti */
+.bg-blue {
+  background-color: #243447;
 }
 
+.twt-btn {
+  border-radius: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight: bold;
+  background: #1DA1F2;
+  background-color: #1DA1F2;
+}
+
+.login {
+  background-color: #1b2836;
+  padding: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.avatar {
+  border-radius: 30px;
+  margin-top: -65px;
+  border: 2px solid #fff;
+}
+
+.post-avatar {
+  border-radius: 30px;
+}
+
+.containor {
+  margin-top: 3%;
+}
+
+.trend {
+  color: #1DA1F2;
+}
+
+.col-flw {
+  width: 33%;
+}
+
+.col-interaction {
+  width: 20%;
+}

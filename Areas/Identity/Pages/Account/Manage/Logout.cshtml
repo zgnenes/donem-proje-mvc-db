@@ -1,0 +1,15 @@
+@page
+@model LogoutModel
+@{
+    ViewData["Title"] = "Logout";
+    Layout = "~/Views/Shred/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="alert alert-info" role="alert">
+    You are about to logout from your account.
+</div>
+
+<form id="logoutForm" method="post">
+    <button id="logout" type="submit" class="btn btn-danger">Logout</button>
+</form>

@@ -1,0 +1,100 @@
+@model IEnumerable<project.Models.Tweet>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card">
+            <img class="card-img-top" height="100" src="~/images/cover.jpg" alt="Card image cap">
+            <div class="card-body">
+                <img class="avatar" src="~/images/avatar.jpg" height="60" width="60"/>
+                <h5 class="card-title" >@User.Identity.Name</h5>
+                <hr>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="col-md-6">
+        @foreach (var item in Model)
+        {
+            <div class="card mb-3" >
+                <div class="row">
+                    <div class="col-md-12 col-avatar">
+                        <img class="post-avatar" src="~/images/avatar.jpg" height="60" width="60" style="margin: 15px;"/>
+                        <div style="float:right;" class="dropdown">
+                            @if (User.Identity.Name == item.TwUserName)
+                            {
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                    <form asp-action="Delete" asp-route-id="@item.Id">
+                                        <input type="hidden" asp-for="@item.Id"/>
+                                        <input type="submit" value="Delete" class="dropdown-item"/>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-md-10" style="margin-left:55px;margin-top:-70px;">
+                        <div class="col-md-8">
+                            <div class="card-header bg-transparent">
+                                <p><a href="@Url.Action("Profile", "User", new { username = item.TwUserName })">@item.TwUserName</a></p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p style="margin-top:-10px;" class="card-text"> @Html.DisplayFor(modelItem => item.Text)</p>
+                            @if (item.ImageUrl != null)
+                            {
+                                <img class="lozad" style="width:100%;height:200px;" src="@item.ImageUrl"/>
+                            }
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <div class="row" style="margin-left:10px;">
+                                <div class="col-interaction">
+                                    <i class="fa fa-comment-o"></i>
+                                </div>
+                                <div class="col-interaction">
+                                    <i class="fa fa-retweet"></i>
+                                </div>
+                                <div class="col-interaction">
+                                    <i class="fa fa-heart-o"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Error Modal -->
+<div class="modal" tabindex="-1" role="dialog" id="errorModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Error</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                You don't have permission to perform this action.
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Show error modal
+        function showErrorModal() {
+            $('#errorModal').modal('show');
+            setTimeout(function() {
+                $('#errorModal').modal('hide');
+            }, 5000); // Hide after 5 seconds
+        }
+    </script>
+}

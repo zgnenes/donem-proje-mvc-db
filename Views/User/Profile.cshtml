@@ -1,0 +1,98 @@
+@model project.ViewModels.UserProfileViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        .card {
+            width: 100%; /* Default width, you can adjust this as needed */
+        }
+        .col-md-6 .card {
+            width: calc(100% - 20px); /* Adjust this value to control the card width */
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .card img.avatar {
+            margin-right: 10px;
+        }
+        .card .dropdown {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Profile</h1>
+
+    <div class="col-md-3">
+        <div class="card" style="width: 505px;">
+            <img class="card-img-top" height="100" src="~/images/cover.jpg" alt="Card image cap">
+            <div class="card-body">
+                <img class="avatar" src="~/images/avatar.jpg" height="60" width="60"/>
+                <h5 class="card-title" >@Model.User.UserName</h5>
+                <hr>
+                <p class="card-text text-light">E-mail: @Model.User.Email</p>
+                <p class="card-text text-light">Phone: @Model.User.PhoneNumber</p>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <div class="col-md-6">
+        <h3>Tweets</h3>
+        @foreach (var item in Model.Tweets)
+        {
+            <div class="card mb-3" style="color:#fff;  margin-bottom: 5px;">
+                <div class="row">
+                    <div class="col-md-12 col-avatar">
+                        <img class="post-avatar" src="~/images/avatar.jpg" height="60" width="60" style="margin: 15px;"/>
+                        <div style="float:right;" class="dropdown">
+                            @if (User.Identity.Name == Model.User.UserName)
+                            {
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                    <form asp-action="Delete" asp-route-id="@item.Id">
+                                        <input type="hidden" asp-for="@item.Id"/>
+                                        <input type="submit" value="Delete" class="dropdown-item"/>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-md-10" style="margin-left:55px;margin-top:-70px;">
+                        <div class="col-md-8">
+                            <div class="card-header bg-transparent">
+                                <p><a href="@Url.Action("Profile", "User", new { username = item.TwUserName })">@item.TwUserName</a></p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p style="margin-top:-10px;" class="card-text"> @Html.DisplayFor(modelItem => item.Text)</p>
+                            @if (!string.IsNullOrEmpty(item.ImageUrl))
+                            {
+                                <img class="lozad" style="width:100%;height:200px;" src="@item.ImageUrl"/>
+                            }
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <div class="row" style="margin-left:10px;">
+                                <div class="col-interaction">
+                                    <i class="fa fa-comment-o"></i>
+                                </div>
+                                <div class="col-interaction">
+                                    <i class="fa fa-retweet"></i>
+                                </div>
+                                <div class="col-interaction">
+                                    <i class="fa fa-heart-o"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

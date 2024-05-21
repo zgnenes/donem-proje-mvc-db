@@ -1,0 +1,57 @@
+@using project.Models
+<ul class="navbar-nav">
+  @if (User.Identity.IsAuthenticated)
+  {
+    <li>
+      <div class="dropdown">
+        <center>
+          <img style="border-radius:20px;" src="~/images/avatar.jpg" width="40" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a id="manage" class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Profile</a>
+          <form id="logoutForm" method="post" asp-area="Identity" asp-page="/Account/Manage/Logout" asp-route-returnUrl="@Url.Page("/Index")" class="form-inline">
+              <button id="logout" type="submit" class="nav-link btn btn-link text-danger">Logout</button>
+          </form>
+        </div>
+        </center>
+      
+      </div>
+    </li>
+    <li style="width:20px;height:10px;"></li>
+    <li class="nav-item">
+      <center>
+        <button type="button" class="btn btn-info twt-btn" data-toggle="modal" data-target="#exampleModalCenter">Post</button>
+      </center>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-light" id="exampleModalLongTitle">Share a post!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              @await Html.PartialAsync("/Views/Tweet/Create.cshtml", new Tweet())
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  }
+  else
+  {
+    <li class="nav-item">
+      <a class="nav-link text-light " id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+  }
+</ul>
+<script>
+    function logout() {
+        document.getElementById('logoutForm').submit();
+    }
+</script>
